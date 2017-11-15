@@ -1,4 +1,4 @@
-## Follow along at: [https://maptimela.github.io/postgis](https://maptimela.github.io/postgis)
+## Follow along at: [https://bondah.github.io/postgis](https://bondah.github.io/postgis)
 
 # Objective
 In this tutorial we will learn:
@@ -7,7 +7,9 @@ In this tutorial we will learn:
 * how to view and edit the data in QGIS
 
 # What data will we use?
-We are using GIS data from LA County
+We are using GIS data from (exercise data is in the data folder):
+* LA County: [https://data.lacounty.gov/GIS-Data/Streams-and-Rivers/6bsh-b6vg](LA County Rivers and Streams) (this has been edited slightly to simplify this exercise. Unnamed streams were removed and all rivers were dissolved by name)
+* 2010 Census Tracts: [http://www2.census.gov/geo/tiger/TIGER2010DP1/Tract_2010Census_DP1.zip](2010 Census tracts w/ data) (LA County has been extracted for this exercise)
 
 # Scope
 We aren't going to be using large datasets for efficiency, but the skills you learn can be applied to large datasets and complex queries.
@@ -46,5 +48,3 @@ CREATE TABLE lariver_mile_buffer AS
 		FROM rivers
 		WHERE gnis_name = 'Los Angeles River';
 ```
-
-# Advanced
