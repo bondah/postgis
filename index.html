@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <html>
 <head>
-	<title>Python+BeautifulSoup+QGIS</title>
+	<title>PostGIS</title>
 	<link target="_blank" href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 	<style>
 		/*
@@ -15,7 +15,7 @@
 				-- Full 1024x768 img, somewhat faded to black and with bold white text (p) centered on top.
 			<div class="slide image_bottom">
 				-- Mostly like default except that image appears at the bottom. (Basically just to give more room for longer text).
-			
+
 			Can make additional class styles for p elements and such if you need different text sizes, colors, etc.
 			(e.g. there is a p.title style with a bigger font)
 			img elements themselves are not displayed; rather, their src attributes are applied as div backgrounds. This is to make centering easier, basically.
@@ -36,7 +36,7 @@
 		}
 		.slide{
 			background-color: #FFF;
-			
+
 		}
 		.slide.image_bottom, .slide.black{
 			background-position: center bottom;
@@ -70,7 +70,7 @@
 		}
 		.slide.black{
 			background-color: black;
-		}		
+		}
 		.slide.image_full div{
 			opacity: .5;
 		}
@@ -89,7 +89,7 @@
 		.slide p.small{
 			font-size: 40px;
 			line-height: 40px;
-		}		
+		}
 		a{
 			color: #2859cc;
 			text-decoration: none;
@@ -125,12 +125,16 @@
 
 <div class="slide image_bottom">
 	<p>PostgreSQL is a free, open source, relational database system.<br></p>
-	<img src="images/postgresql.png"/> 
+	<img src="images/postgresql.png"/>
+</div>
+
+<div class="slide black">
+	<p>Task 1: Installation<br></p>
 </div>
 
 <div class="slide image_bottom">
 	<p>Go to <a target="_blank" href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">EDB</a> and get the 9.6.6 installer for your version.</p>
-	<img src="images/download.png"/> 
+	<img src="images/download.png"/>
 </div>
 
 <div class="slide black">
@@ -139,104 +143,163 @@
 
 <div class="slide">
 	<p class="small">For the most part, you want to accept the defaults during the install.<br>Accept the default directory:</p>
-	<img src="images/install1.png"/> 
+	<img src="images/install1.png"/>
 </div>
 
 <div class="slide">
 	<p class="small">Set the password to postgres:</p>
-	<img src="images/install2.png"/> 
+	<img src="images/install2.png"/>
 </div>
 
 <div class="slide">
 	<p class="small">Accept the default port number (unless you know you run something else on that port):</p>
-	<img src="images/install3.png"/> 
+	<img src="images/install3.png"/>
 </div>
 
 <div class="slide">
 	<p class="small">Accept the default database locale:</p>
-	<img src="images/install4.png"/> 
+	<img src="images/install4.png"/>
 </div>
 
 <div class="slide">
 	<p class="small">Launch Stack Builder:</p>
-	<img src="images/install5.png"/> 
+	<img src="images/install5.png"/>
 </div>
 
 <div class="slide">
 	<p class="small">Pick your just installed PostgreSQL:</p>
-	<img src="images/install6.png"/> 
+	<img src="images/install6.png"/>
 </div>
 
 <div class="slide">
 	<p class="small">Select PostGIS from the Spatial Extensions:</p>
-	<img src="images/install7.png"/> 
+	<img src="images/install7.png"/>
 </div>
 
 <div class="slide">
 	<p class="small">Accept defaults all the way through.<br>That's it!</p>
-	<img src="images/install8.png"/> 
+	<img src="images/install8.png"/>
+</div>
+
+<div class="slide black">
+	<p>Task 2: Add spatial data<br></p>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">Open pgadmin and connect to your database server. It may already be connected, if not add your details used during the install.</p>
-	<img src="images/pgadmin.png"/> 
-</div>
-
-<div class="slide image_bottom">
-	<p class="small">Create a new database. We will name it maptime:</p>
-	<img src="images/createdb.png"/> 
+	<img src="images/pgadmin.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">Create a new database by right clicking on Databases and selecting Create, Database:</p>
-	<img src="images/createdb.png"/> 
+	<img src="images/createdb.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">We will name the new database maptime and the owner will be postgres:</p>
-	<img src="images/dbname.png"/> 
+	<img src="images/dbname.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">On the Definition tab, select the template template_postgis & click Save:</p>
-	<img src="images/template.png"/> 
+	<img src="images/template.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">If you see this error, you probably clicked on the template_postgis database. Just right click on template_postgis database, disconnect, & try again:</p>
-	<img src="images/error.png"/> 
+	<img src="images/error.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p>Time for QGIS!<br><br>
 	<a target="_blank" href="http://www.qgis.org/en/site/">QGIS</a> is a free geographic information system software for making maps and analyzing spatial data.<br>
 	<br></p>
-	<img src="images/qgis_logo.png"/> 
+	<img src="images/qgis_logo.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">Open the maptime.qgs file. This is a map containing 2 shapefiles:</p>
-	<img src="images/qgis.png"/> 
+	<img src="images/qgis.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">Click on the elephant icon:</p>
-	<img src="images/qgispostgre.png"/> 
+	<img src="images/qgispostgre.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">You'll use the parameters from your install:</p>
-	<img src="images/qgisconnect.png"/> 
+	<img src="images/qgisconnect.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">We'll use DB Manager to add data. Go to Database, DB Manager:</p>
-	<img src="images/dbmanager.png"/> 
+	<img src="images/dbmanager.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">Select the public schema in your maptime database, and click on the import icon (down arrow):</p>
-	<img src="images/import.png"/> 
+	<img src="images/import.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">Import your rivers. The table name is what the data layer will be called in postgreSQL:</p>
+	<img src="images/riversimport.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">You'll notice the term SRID. This is the spatial reference system. You can look up the codes on the <a target="_blank" href="https://www.epsg-registry.org/">EPSG site</a></p>
+	<img src="images/riversimport.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">Now import the tracts:</p>
+	<img src="images/tractsimport.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">Next, explore your postGIS data in QGIS:</p>
+	<img src="images/***.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">And in pgAdmin:</p>
+	<img src="images/***.png"/>
+</div>
+
+<div class="slide black">
+	<p>Task 3: Query data<br></p>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">First, let's figure out how many tracts the LA River flows through in QGIS. To start, let's isolate the LA River in our rivers layer:</p>
+	<img src="images/***.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">Then, we will do a select by location to select tracts that intersectthe river:</p>
+	<img src="images/***.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">On the map you should see the tracts selected. When we open the attribute table, we find out there are 64 tracts touching the LA River:</p>
+	<img src="images/selected.png"/>
+</div>
+
+<div class="slide">
+	<p class="small">Now let's do the query in pgAdmin using SQL. If you have never used SQL, here are some resources:</p><br>
+	Tutorial: <a target="_blank" href="http://www.postgresqltutorial.com/">www.postgresqltutorial.com</a><br>
+	Official Guide: <a target="_blank" href="https://www.postgresql.org/docs/9.6/static/sql.html">www.postgresql.org/docs/9.6/static/sql.html</a>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">With your maptime datbase open, go to Tools, Query. Copy the following code from the GitHub ReadMe to the query window:</p>
+	<img src="images/stintersect.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">Let's break this down. SELECT extracts a subset of data from our table:</p>
+	<img src="images/stintersect.png"/>
 </div>
 
 <div class="slide image_full">
