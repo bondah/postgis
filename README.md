@@ -12,4 +12,13 @@ We are using GIS data from LA County
 # Scope
 We aren't going to be using large datasets for efficiency, but the skills you learn can be applied to large datasets and complex queries.
 
+# Code snippets
+```sql
+SELECT rivers.gnis_name as rivers, count(*) as tracts
+	FROM rivers, tracts
+	WHERE ST_Intersects(rivers.geom, tracts.geom)
+	GROUP BY rivers
+    ORDER BY rivers;
+```
+
 # Advanced
