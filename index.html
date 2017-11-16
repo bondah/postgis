@@ -273,12 +273,17 @@
 
 <div class="slide image_bottom">
 	<p class="small">First, let's figure out how many tracts the LA River flows through in QGIS. To start, let's isolate the LA River in our rivers layer:</p>
-	<img src="images/***.png"/>
+	<img src="images/defquery.png"/>
 </div>
 
 <div class="slide image_bottom">
-	<p class="small">Then, we will do a select by location to select tracts that intersect the river:</p>
-	<img src="images/***.png"/>
+	<p class="small">Then, we will do a select by location to select tracts that intersect the river. Go to Vector, Research Tools, Select by Location:</p>
+	<img src="images/selectbyloc.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">Select tracts that intersect the river:</p>
+	<img src="images/selectbyloc2.png"/>
 </div>
 
 <div class="slide image_bottom">
@@ -309,42 +314,56 @@
 
 <div class="slide image_bottom">
 	<p class="small">Click the lightning bolt to execute your query. The results appear at the bottom:</p>
-	<img src="images/***.png"/>
+	<img src="images/stintersect.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">If we want to use this table often, you could make a VIEW table by adding some text:</p>
-	<img src="images/***.png"/>
+	<img src="images/query2.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">View tables are accessible outside of pgAdmin and the query is run every time the View is referenced (in case your base data changes):</p>
-	<img src="images/***.png"/>
+	<img src="images/viewqgis.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">Now let's look at tracts. The field names don't mean much, but we have a lookup:</p>
-	<img src="images/***.png"/>
+	<img src="images/lookup.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">Try to formulate your own query using a field. For example, let's select tracts w/ >500 vacant housing units:</p>
-	<img src="images/***.png"/>
+	<img src="images/query3.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">2010 Census data isn't changing, so let's make that a permanent table using CREATE TABLE instead of a VIEW:</p>
-	<img src="images/***.png"/>
+	<img src="images/query3table.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">Open QGIS and examine your vacant_units TABLE:</p>
-	<img src="images/***.png"/>
+	<img src="images/vacant_units.png"/>
 </div>
 
 <div class="slide image_bottom">
 	<p class="small">The last example was something you could do easily in QGIS, let's get more complex. First let's create a buffer of the LA River:</p>
-	<img src="images/***.png"/>
+	<img src="images/query4.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">The last example was something you could do easily in QGIS, let's get more complex. First let's create a buffer of the LA River:</p>
+	<img src="images/query5.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p class="small">Then let's make a function to calculate proportional area:</p>
+	<img src="images/query6.png"/>
+</div>
+
+<div class="slide">
+	<p>A function is reusable code. We can use our function on any 2 polygon layers!</p>
 </div>
 
 <div class="slide image_bottom">
