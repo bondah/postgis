@@ -21,7 +21,7 @@ SELECT rivers.gnis_name as rivers, count(*) as tracts
 	FROM rivers, tracts
 	WHERE ST_Intersects(rivers.geom, tracts.geom)
 	GROUP BY rivers
-    ORDER BY rivers;
+  ORDER BY rivers;
 ```
 Create view of tracts and rivers intersection:
 ```sql
@@ -30,7 +30,7 @@ CREATE VIEW tracts_touch_rivers
 		FROM rivers, tracts
 		WHERE ST_Intersects(rivers.geom, tracts.geom)
 		GROUP BY rivers
-	    ORDER BY rivers;
+	  ORDER BY rivers;
 ```
 Select tracts with more than 500 vacant units:
 ```sql

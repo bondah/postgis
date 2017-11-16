@@ -292,9 +292,9 @@
 </div>
 
 <div class="slide">
-	<p class="small">Now let's do the query in pgAdmin using SQL. If you have never used SQL, here are some resources:<br>
-	Tutorial: <a target="_blank" href="http://www.postgresqltutorial.com/">www.postgresqltutorial.com</a><br>
-	Official Guide: <a target="_blank" href="https://www.postgresql.org/docs/9.6/static/sql.html">www.postgresql.org/docs/9.6/static/sql.html</a></p>
+	<p class="small">Now let's do the query in pgAdmin using SQL. If you have never used SQL, here are some resources:<br><br>
+	Tutorial: <br><a target="_blank" href="http://www.postgresqltutorial.com/">www.postgresqltutorial.com</a><br><br>
+	Official Guide: <br><a target="_blank" href="https://www.postgresql.org/docs/9.6/static/sql.html">www.postgresql.org/docs/9.6/static/sql.html</a></p>
 </div>
 
 <div class="slide image_bottom">
@@ -303,10 +303,10 @@
 </div>
 
 <div class="slide image_bottom">
-	<p class="small">Let's break this down.<br><br>
+	<p class="small">Let's break this down:<br><br><br>
 	> SELECT extracts a subset of data from our table<br><br>
 	> count creates a count field<br><br>
-	> ST_Intersects is an intersect command<br><br>
+	> ST_Intersects is a PostGIS intersect function<br><br>
 	> GROUP BY sets grouping<br><br>
 	> ORDER BY sets sort order<br><br>
 	</p>
@@ -343,13 +343,8 @@
 </div>
 
 <div class="slide image_bottom">
-	<p class="small">Open QGIS and examine your vacant_units TABLE:</p>
-	<img src="images/vacant_units.png"/>
-</div>
-
-<div class="slide image_bottom">
-	<p class="small">The last example was something you could do easily in QGIS, let's get more complex. First let's create a buffer of the LA River:</p>
-	<img src="images/query4.png"/>
+	<p class="small">Open QGIS and examine your vacant_units table (layer):</p>
+	<img src="images/vacantunits.png"/>
 </div>
 
 <div class="slide image_bottom">
@@ -367,12 +362,16 @@
 </div>
 
 <div class="slide image_bottom">
-	<p class="small">We want a proportion of the population (or any census value) because not all of the tracts that intersect our buffer are completed inside it:</p>
+	<p class="small">We want a proportion of the population (or any census value) because not all of the tracts that intersect our buffer are completly inside it:</p>
 	<img src="images/proportion.png"/>
 </div>
 
+<div class="slide">
+	<p>WITH is a way to break down complex queries. It defines some temporary tables for use in the query.</p>
+</div>
+
 <div class="slide image_bottom">
-	<p class="small">Finally, we use our function to on the LA River buffer & tracts:</p>
+	<p class="small">Finally, we use our function on the LA River buffer & tracts:</p>
 	<img src="images/query7.png"/>
 </div>
 
